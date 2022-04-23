@@ -1,0 +1,190 @@
+*{
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    width: 100%;
+    min-height: 200px;
+    background: black;
+    padding: 2em 2em;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('./images/bg_img.png');
+}
+
+.container >a{
+    color: inherit;
+    text-decoration: none;
+    font-size: 0.75rem;
+}
+
+.container{
+    max-width: 650px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 1px solid; */
+}
+
+/* === SEARCH BAR === */
+
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search *{
+    margin: 0;
+    padding: 0.5em;
+    
+    transform: translateY(-25%);
+    /* box-shadow: 0px 0px 10px rgba(0,0,0,.2); */
+    /* background: yellow; */
+}
+
+
+.search input{
+    border-radius: 10px 0 0 10px;
+    margin: 0px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,.2);
+    display: inline-block;
+    border: 1px solid #D1D5DB;
+    padding-left: 2em;
+    background-image: url(./images/ion_search.png);
+    background-repeat: no-repeat;
+    background-position: 10px;
+    width: 250px
+}
+
+.search button{
+    background: #F9FAFB;
+    margin: 0;
+    border-radius: 0 10px 10px 0;
+    display: inline-block;
+    border: 1px solid #D1D5DB;
+    
+}
+
+/* === MAIN CONTAINER === */
+
+main {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column
+}
+
+#movie-container{
+    display: flex;
+    width: 100%;
+    /* border: 1px solid green; */
+    /* padding: 0 2rem; */
+    margin: 0 4rem;
+    border-bottom: 2px solid #E5E7EB;
+    padding: 1em 0;
+}
+
+.movie-img{
+    width: 100%;
+    max-width: 100px;
+    align-self: center;
+    margin-left: 1rem;
+
+}
+
+.movie-description{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    /* border: 1px solid blue; */
+}
+
+.movie-description h3{
+    margin-bottom: 0;
+    /* border: 1px solid blue; */
+}
+
+.flex {
+    display: flex;
+    margin:0;
+    /* border: 1px solid green; */
+    align-items: center;
+}
+.flex > *{
+    margin-right: 1em;
+}
+
+.movie-stats{
+    display: flex;
+    margin: 0;
+    /* border: 1px solid green; */
+    align-items: center;
+}
+.movie-stats > *{
+    margin-right: 1em;
+    font-size: .75rem;
+    padding: 0;
+    /* background: yellow */
+}
+
+.movie-text{
+    color: #6B7280;
+    margin-top: 0;
+}
+
+/* ===BUTTONS==== */
+
+.watchlist-btn{
+    padding: 0px 6px;
+    height: 30px;
+    border: none;
+    background: white;
+    display: flex;
+    align-items: center;
+    border-radius: 10px
+}
+.watchlist-btn:hover,
+.watchlist-btn:focus {
+    transform: scale(1.15);
+    /* filter: brightness(0.8); */
+    box-shadow: 2px 2px 5px rgba(0,0,0,.2);
+    cursor: pointer;
+}
+
+
+.add-movie-icon{
+    height: 50%;
+    background: black;
+    border-radius: 50%;
+    margin-right: 3px;
+}
+
+
+/* === MODAL === */
+
+#modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255,255,255,.9);
+    padding: 0.5em 1.5em;
+    border-radius: 30px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 200ms;
+    color: black;
+    box-shadow: 5px 5px 5px rgba(0,0,0,.5);
+}
